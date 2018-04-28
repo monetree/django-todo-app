@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Index page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+<link rel="stylesheet" href='{% static "css/style.css" %}'>
+<link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+
+</head>
+<body>
+
+<h2 class="text-center">My App</h2>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+    <form action="/display" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+    <input type="text" name="t1" class="form-control" placeholder="Enter Name"></div>
+    <div class="form-group">
+    <input type="text" name="t2" class="form-control" placeholder="Enter Email"></div>
+    <button type="submit" class="btn btn-danger">submit</button>
+    
+    </form>
+    
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+
+<div class="row">
+{% for records in data %}
+
+<div class="col-sm-3">
+<div class="card">
+    <div class="card-header bg-danger text-white text-center">{{ records.name }}
+        <a href="delete/{{records.id}}" style="color:white;"><button class="btn btn-sm btn-danger">delete</button></a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-danger">{{records.email}}
+          <span style="float:right;" class="text-danger"><i class="fas fa-american-sign-language-interpreting"></i></span>
+      </h5>
+    </div>
+    <div class="card-footer">
+        <a href="update_now/{{records.id}}" style="color:white;"><button class="btn btn-sm btn-info">Update</button></a>
+
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/popper.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/icons.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,26 @@
+
+h2{
+color:white;
+}
+.card{
+    margin:5px;
+    box-shadow:5px 5px 20px silver;
+    font-family: 'Pacifico', cursive;
+}
+.form-control{
+    border: 2px solid lightcoral;
+}
+
+/* font-family: 'Caveat Brush', cursive;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Karma', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Itim', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Satisfy', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'Roboto', sans-serif; */

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Index page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+<link rel="stylesheet" href='{% static "css/style.css" %}'>
+<link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+
+</head>
+
+<h2 class="text-center">My App</h2>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+<form action="/update/{{ id.id }}" method="post">
+    {% csrf_token %}
+<div class="form-group">
+<input type="text" name='name' class="form-control" value="{{ id.name }}">
+</div>
+<div class="formgroup">
+<input type="text" name='email' class="form-control" value="{{ id.email }}">
+</div>
+
+<div class="formgroup">
+    <button class="btn btn-danger btn-sm">Update</button>
+</div>
+
+</form>
+
+            </div>
+            <div class="col-sm-4"></div>
+            </div>
+            </div>
